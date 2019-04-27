@@ -1,12 +1,12 @@
 from datetime import datetime
 
+from ..middleware.downloader_middlewares import DownloaderMiddleware
+from ..middleware.spider_middlewares import SpiderMiddleware
 from .spider import Spider
 from .scheduler import Scheduler
 from .downloader import Downloader
 from .pipeline import Pipeline
 from ..http.request import Request
-from ..middlewares.spider_middlewares import SpiderMiddleware
-from ..middlewares.downloader_middlewares import DownloaderMiddleware
 # 导入日志对象
 from ..utils.log import logger
 
@@ -31,7 +31,7 @@ class Engine(object):
         self.spider = Spider()
         self.scheduler = Scheduler()
         self.downloader = Downloader()
-        self.pipeline = Pipeline() # 缺了小括号
+        self.pipeline = Pipeline() #
         # 在init方法, 创建爬虫中间件 和下载器中间件
         self.spider_middleware = SpiderMiddleware()
         self.downloader_middware = DownloaderMiddleware()
@@ -56,7 +56,7 @@ class Engine(object):
         :return:
         """
         # 1. 调用爬虫start_requests,获取起始请求
-        request = self.spider.start_requests()
+        request = self.spider.start_request()
 
         # 调用爬虫中间件的process_request来处理请求
         request = self.spider_middleware.process_request(request)
