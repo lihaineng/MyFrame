@@ -1,9 +1,8 @@
 # scrapy_plus/utils/log.py
-import sys
 import logging
+import sys
 
-# 4. 在使用配置信息的地方, 导入settings的配置信息
-from ..conf.settings import DEFAULT_LOG_FMT, DEFAULT_LOG_FILENAME, DEFAULT_LOG_LEVEL, DEFUALT_LOG_DATEFMT
+from spiderframe.conf.settings import DEFAULT_LOG_FMT, DEFAULT_LOG_FILENAME, DEFAULT_LOG_LEVEL, DEFUALT_LOG_DATEFMT
 
 
 class Logger(object):

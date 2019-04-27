@@ -7,6 +7,6 @@ from settings import *
 
 # import sys
 # print(sys.path)
-# /Users/itheima/Documents/爬虫项目/day13/code/framework/project_dir
-# /Users/itheima/Documents/爬虫项目/day13/code/framework
+# /Users/xx/Documents/爬虫项目/day13/code/framework/project_dir
+# /Users/xx/Documents/爬虫项目/day13/code/framework
 # 从这里我们可以看出, 框架首先会加载项目中的配置信息
